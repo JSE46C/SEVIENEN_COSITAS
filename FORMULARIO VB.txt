@@ -1,0 +1,26 @@
+Private Sub AGREGAR_Click()
+Worksheets("HOJA1").Range("A8").EntireRow.Insert
+
+
+Range("A8") = DATO1.Value
+Range("B8") = DATO2.Value
+Range("C8") = DATO3.Value
+
+DATO1 = Empty
+DATO2 = Empty
+DATO3 = Empty
+
+DATO1.SetFocus
+
+End Sub
+
+Private Sub SALIR_Click()
+Unload Me
+
+End Sub
+
+Private Sub UserForm_Initialize()
+DATO3.List = Worksheets("HOJA1").Range("H1:H5").Value
+
+
+End Sub
